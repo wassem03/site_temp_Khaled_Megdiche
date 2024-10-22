@@ -1,0 +1,770 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    
+    
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background: url("images/image0.jpeg") no-repeat center center fixed; /* Ensure the background image is fixed */
+    background-size: cover; /* Ensure the background image covers the entire page */ 
+    scroll-behavior: smooth; 
+}
+/*NAVBAR-------------------------------------------------------------------------------------------------------------------------*/
+nav {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 8em;
+    display: flex;
+    box-shadow: 1px 1px 2px 2px gray;
+    position: fixed;
+    z-index: 50;
+    
+
+}
+
+.logo_nav {
+    background: url(images/logo+texte.png);
+    background-size:contain ;
+    background-repeat: no-repeat;
+    width: 18%;
+    margin-top: 1%;
+    height: 5em;
+    margin-left: 2%;
+}
+
+.nav-links {
+    margin-left: 38%;
+    width: 50%;
+    align-items: center;
+    display: flex;
+    text-decoration: none ;
+    list-style-type: none;
+    justify-content: space-around;
+    font-size: 1.3em; 
+    
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom:-5px;
+        left:0;
+        width: 100%;
+        height: 2px;
+        background-color: #088b54;
+        transform: scaleX(0);
+        transition: 0.3s transform ease-in-out;
+    }
+
+    &:hover {
+        &:after {
+            transform: scaleX(1);
+        }
+    }
+}
+
+.menu-hamburger {
+    display: none;
+}
+
+
+
+/*LANDING-PAGE-------------------------------------------------------------------------------------------------------------------------*/
+
+.cont-diapo{position: relative; height: 100%;}
+
+.diapo1 {
+    width: 100%;
+    height: 95vh;
+    background: url("images/keepcool.jpg");
+    background-size: cover;
+    z-index: 1;
+    
+}
+
+.bg2 {
+     background: url("images/image2.jpeg");
+     background-size: cover; 
+     animation: 18s fondu infinite ease-in-out;
+     animation-delay: 6s;
+     opacity: 0;
+     z-index: 1;
+     position: absolute;
+     
+    }
+
+.bg3 {
+    background: url("images/khaled.jpg"); 
+    background-size: cover;
+    animation: 18s fondu infinite ease-in-out ;
+    animation-delay: 12s; 
+    opacity: 0;
+    z-index: 1;
+    position: absolute;
+}
+
+.degrade {
+    opacity: 1;
+    background:linear-gradient(to right, #088b54,70%, transparent);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    position: absolute;
+    
+}
+
+.texte-landing-page {
+    margin-right: 50%;
+    margin-left: 10%;
+    color: white;
+    
+    
+}
+
+/*PRESENTATION-------------------------------------------------------------------------------------------------------------------------*/
+
+.page1 {
+    width: 100%;
+    height: 100%;
+    margin-top: 20vh;
+    background-color: white;
+    z-index: 1;
+}
+
+.premier-article {
+    width: 70%;
+    margin-left: 15%;
+    padding-top: 10vh;
+    height: 100%;
+    /*background-color: whitesmoke;*/
+}
+
+.presentation-double {
+    display: flex;
+    /*background-color: aqua;*/
+    margin-bottom: 5vh;
+}
+
+.presentation1 {
+    width: 46%;
+    margin: 2% 2% 2% 2%;
+    animation: 1s slideInShortL;
+    animation-timeline: view();
+    animation-range-start: cover 0%;
+    animation-range-end: cover 40%;
+}
+
+.image-pro {
+    background: url(images/khaled.jpg);
+    background-size: cover;
+    width: 50%;
+    border: solid 5px #088b54;
+    animation: 1s slideInShortR;
+    animation-timeline: view();
+    animation-range-start: cover 0%;
+    animation-range-end: cover 40%;
+    
+}
+
+.barre {
+    width: 20%;
+    height: 4px;
+    background-color: #088b54;
+    margin: 2vh 0 2vh 2%;
+    z-index: 5;
+    
+}
+
+.gauche {
+    margin: 2vh 2% 5vh 78%;
+}
+
+.presentation2 {
+    width: 90%;
+    margin: 2% 2% 2% 2%;
+    /*animation: 5s file infinite ease-in-out ; */
+    animation: 1s slideInShortL;
+    animation-timeline: view();
+    animation-range-start: cover 0%;
+    animation-range-end: cover 80%;
+}
+
+/*PRESENTATION-DEFILE-----------------------------------------------------------------------------------------------------------------*/
+
+.defile {
+    width: 100% ;
+    height: fit-content;
+    padding-top: 5vh;
+}
+
+.carre {
+    width: 12%;
+    height: fit-content;
+    position: absolute;
+   animation: 14s file infinite linear ;
+}
+
+/*.carre1 {
+    width: 250px;
+    background-size: contain;
+    height: 100%;
+    animation: 2s file infinite linear ;
+}*/
+
+/*QUI-SUIS-JE-------------------------------------------------------------------------------------------------------------------------*/
+
+.double-video{
+    width: 80%;
+    margin-left: 10%;
+    background-color: rgb(255, 255, 255);
+    padding-top: 40vh ;
+    display: flex;
+}
+
+video {border: solid 5px #088b54;}
+
+.videoo {
+    align-items: center;
+    justify-content: center;
+    width: 47.5%;
+    height: fit-content;
+    animation: 1s slideInShortR;
+    animation-timeline: view();
+    animation-range-start: cover 0%;
+    animation-range-end: cover 40%;
+    
+}
+
+.texte-qsj {
+    width: 47.5%;
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: 1s slideInShortL;
+    animation-timeline: view();
+    animation-range-start: cover 0%;
+    animation-range-end: cover 40%;
+}
+
+/*SAVOIR-FAIRE-------------------------------------------------------------------------------------------------------------------------*/
+
+.container {
+    height: 100%;
+    position: relative;
+    width: 100%;
+    animation: 1s slideInLongT;
+    animation-timeline: view();
+    animation-range-start: cover -20%;
+    animation-range-end: cover 20%;
+}
+
+
+.troisieme-article {
+    background-color: #088b54;
+    color: white;
+    width: 70%;
+    margin-left: 15%;
+    top: -35vh;
+    position: absolute;
+}
+
+.page2 {
+    width: 100%;
+    background-color: white;
+    height: 70vh;
+    margin-top: 45vh;
+}
+
+.double-SF1 {
+    width: 92%;
+    margin: 2vh 4% 2vh 4%;
+    display: flex;
+    
+}
+
+.texte-SF1 {
+    width: 48%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    
+}
+
+.lien {
+    width: 30%;
+    margin: 5vh 0 5vh 0;
+    padding: 0 50px 0 2px;
+    background-color: rgb(255, 255, 255);
+    color: #088b54;
+    display: flex;
+    text-decoration: none;
+    transition: width 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.lien:hover {
+    width: 100%;
+    color:white;
+    background-color:#088b54;
+    
+}
+
+
+.fond-gal {
+    background: url(images/sf/20221113_141030.jpg);
+    background-size: cover;
+    width: 48%;
+    margin-left: 4%;
+    border: solid 5px #088b54;
+}
+
+
+.galerie {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    background-color: #c0c0c0;
+    backdrop-filter: blur(8px);
+    opacity: 0.9;
+    color: #088b54;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    margin: 105% 0 0 65%;
+    transition: width 0.5s ease-in-out, color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    overflow: hidden; /
+}
+
+
+
+.galerie .dephotos {
+    opacity: 0; /* Par défaut, le texte est invisible */
+    display: none;
+    margin-left: 10px; /* Espace entre l'icône et le texte */
+}
+
+.galerie:hover {
+    width: 150px; 
+    background-color: #088b54;
+    color: white;
+    
+}
+
+.galerie:hover .dephotos {
+    display: inline;
+    animation: 0.5s op ease-in-out; 
+    
+    opacity: 1;/
+}
+
+
+/*FOOTER-------------------------------------------------------------------------------------------------------------------------*/
+
+footer {
+    background:linear-gradient(to right, #900c3f, #78b536);
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap ;
+}
+
+.foot-part {
+    width: 33.33%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 1em;
+    color: white;
+    
+    
+}
+
+.foot-part p {
+    margin: 15px 0 0 15px;
+    
+}
+
+.foot-part a {
+    color: rgb(230, 229, 229);
+}
+
+
+
+
+
+
+
+
+
+/*ANIMATION-------------------------------------------------------------------------------------------------------------------------*/
+
+@keyframes file {
+    0% {
+        transform: translateX(-10vw);
+        opacity: 0;
+    }
+    18% {opacity: 0;}
+    20% {opacity: 1;}
+    98% {opacity: 1;}
+    100% {
+        transform: translateX(80vw);
+        opacity: 0;
+    }
+}
+
+@keyframes fondu{
+   0%{opacity: 0;}
+   10%{opacity: 1;}
+   33.33%{opacity: 1;}
+   43.33%{opacity: 0;}
+   100%{opacity: 0;}
+}
+
+@keyframes slideInShortL {
+    0% {
+        opacity: 0;
+        transform: translateX(-5%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInShortR {
+    0% {
+        opacity: 0;
+        transform: translateX(5%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInLongT {
+    0% {
+        opacity: 0;
+        transform: translateY(40%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+  
+@keyframes op {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+@keyframes colore {
+    0%{background-color:#c0c0c0; color: #088b54;}
+    100%{background-color: #088b54; color: white;}
+}
+    
+/*RESPONSIVE------------------------------------------------------------------------------------------------------*/
+
+
+@media screen and (max-width: 1470px){
+    .texte-qsj {
+        font-size:0.8em;
+    }
+}
+
+
+@media screen and (max-width: 1100px) {
+
+    /*NAVBAR---------------------------------------------------------*/
+    nav{
+      padding: 0;
+      background-color: rgb(87, 80, 65, 0);
+      box-shadow: none;
+      
+    }
+    .nav-links{
+      top: 0;
+      left: 0;
+      position: absolute;
+      background-color: rgba(8, 139, 84, 0.8);
+      width:100%;
+      height: 100vh;
+      display: flex;
+      backdrop-filter: blur(8px);
+      justify-content: center;
+      align-items: center;
+      margin-left: -100%;
+      transition: all 0.5s ease;
+      flex-direction: column;
+      align-items: center;
+      
+    }
+    
+  
+    .logo_nav {
+      background:url(/images/logo+texte.png) ;
+    }
+    
+    .menu-hamburger {
+      display: block;
+      width: 5vw;
+      position: absolute;
+      margin: 5vh 0 0 80vw ;/* a régler pour maxwidth 600-400px*/
+      background-color:#088b54;
+      padding: 3%;
+      border-radius: 20%;
+      ;
+    }
+  
+    
+  .mobile-menu{
+    margin-left: 0;
+    
+  }
+  
+  
+  
+    .nav-links li {    
+        margin: 25px 0;
+        font-size: 1.4em;
+        
+        
+    }
+
+    /*LANDING-PAGE---------------------------------------------------------*/
+
+    .diapo1 {
+        height: 100vh;
+    }
+
+    .degrade {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .texte-landing-page{
+        font-size: 80%; 
+        width: fit-content;
+    }
+
+    /*¨PRESENTATION---------------------------------------------------------*/
+
+    .premier-article {
+        width: 90%;
+        margin-left: 5%;
+        flex-wrap: wrap;
+        
+    }
+
+    
+
+    .presentation-double{
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .presentation1 {
+        width: 100%;
+        
+    }
+
+    .image-pro {
+        height: 50vh;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    /*PRESENTATION-DEFILE-------------------------------------------------*/
+
+    .defile {display: none;}
+    .carre {width: 13%;}
+
+    /*PRESENTATION-DEFILE-------------------------------------------------*/
+
+    .double-video {
+        padding-top: 25vh;
+        width: 90%;
+        margin-left: 5%;
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .videoo {
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .texte-qsj {
+        width: 100%;
+        text-align: center;
+        margin: 5vh 0 0vh 0;
+        padding-bottom: 2vh;
+    }
+
+    /*SAVOIR-FAIRE------------------------------------------------------*/
+
+    .troisieme-article {
+        width: 90%;
+        margin: 12vh 0 0 5%;
+        
+    }
+
+    .texte-SF1 {
+        font-size: 80%;
+    }
+
+    .lien {
+        font-size: 1.5em;
+        width: 50%;
+    }
+
+    .fond-gal {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .galerie {
+        margin: 140% 0 0 0;
+        
+    }
+
+    /*FOOTER----------------------------------------------------------*/
+
+    footer {
+        font-size: 90%;
+    }
+
+    .foot-part {
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+    }
+
+    .logo {
+        width: 20%;
+    }
+    .contact {
+        width: 40%;
+    }
+    .mentions {
+        width: 40%;
+    }
+
+  }
+                
+
+
+  @media screen and (max-width: 700px) {
+
+
+
+
+    .page2 {
+        height: 150vh;
+        margin-top: 40vh;
+       
+    }
+
+    .double-video {
+        width: 100%;
+        margin:0 ;
+        margin-bottom: 10px;
+    }
+
+    .troisieme-article{
+        top: 0vh;
+    }
+
+    
+
+    .double-SF1{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        padding-top: 0vh;
+        
+    }
+
+    .texte-SF1 {
+        width: 100%;
+        
+    }
+
+    .fond-gal {
+        height: 50vh;
+        width: 60%;
+        margin-left: 20%;
+        
+    }
+
+    .galerie{
+        margin: 80% 0 0 0;
+        size: 70%
+    }
+
+    .logo {
+        display: none;
+    }
+    .contact {
+        width: 50%;
+    }
+    .mentions {
+        width: 50%;
+    }
+
+
+  }
+
+
+
+  @media screen and (max-width: 450px) {
+
+    .degrade {
+        display: block;
+        
+    }
+    
+    .texte-landing-page {
+        text-align: center;
+        margin: 50% 0 0 10%;
+        width: 80%;
+        font-size: 70%;
+        
+    }
+
+    .texte-qsj {
+        font-size: 70%;
+        width: 90%;
+        padding: 0 0% 10% 10%;
+        margin-left: -5%;
+    }
+
+    
+    .texte-SF1 {
+        font-size: 70%;
+    }
+
+    .foot-part {
+        font-size: 70%;
+    }
+
+
+  }
